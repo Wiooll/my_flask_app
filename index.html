@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    <form id="product-form">
+        Nome: <input type="text" id="nome"><br>
+        Quantidade: <input type="number" id="quantidade" min="0"><br>
+        Preço: <input type="number" id="preco" min="0"><br>
+        <button type="submit">Adicionar Produto</button>
+    </form>
+    <table id="produtos">
+        <thead>
+            <tr>
+                <th>Selecionar</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="totals hidden">
+        Preço Total: <span id="preco-total">0.00</span><br>
+        Preço Selecionado: <span id="preco-selecionado">0.00</span><br>
+    </div>
+    <button id="btn-remover-todos" class="hidden">Remover Todos</button>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
