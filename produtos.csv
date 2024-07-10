@@ -1,0 +1,4 @@
+nome,quantidade,preco,selecionado
+Produto A,10,15.5,false
+Produto B,5,7.99,true
+Produto C,2,20,true
